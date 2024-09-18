@@ -8,6 +8,10 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { Amplify } from 'aws-amplify';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomFormControlComponent } from './custom-form-control/custom-form-control.component';
+import { CommonModule } from '@angular/common';
+import { ChildOneComponent } from './dashboard/child-one/child-one.component';
 
 Amplify.configure({
   Auth: {
@@ -22,12 +26,17 @@ Amplify.configure({
     AppComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    CustomFormControlComponent,
+    ChildOneComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    AmplifyAuthenticatorModule
+    AmplifyAuthenticatorModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
