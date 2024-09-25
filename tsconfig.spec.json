@@ -3,7 +3,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/spec",
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "./tests",
     "types": [
       "jasmine"
     ]
