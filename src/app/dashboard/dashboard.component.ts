@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   name = '1234';
   nameObj = { name: '5678', age: 25 };
   ngOnInit(): void {
+    console.log('test');
     of(1, 2, 3, 66)
       .pipe(
         concatMap(val => of(`Processed ${val}`).pipe(delay(1000)))
